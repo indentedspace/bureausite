@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  bureausite:
+    restart: always
+    build: .
+    ports:
+      - "127.0.0.1:3001:80"

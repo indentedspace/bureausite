@@ -1,0 +1,20 @@
+{
+  "name": "bureausite",
+  "version": "0.0.1",
+  "description": "bure.com.au website",
+  "main": "index.js",
+  "repository": "https://github.com/indentedspace/bureausite.git",
+  "author": "cambo <cambo@bure.com.au>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "build-server": "yarn tsc -b server",
+    "build-client": "cd ./client && yarn && yarn build",
+    "build": "yarn && yarn build-server && yarn build-client",
+    "start": "docker-compose build && docker-compose up",
+    "stop": "docker-compose down"
+  }
+}
