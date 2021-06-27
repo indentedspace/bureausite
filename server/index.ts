@@ -12,4 +12,4 @@ app.get("*", (req, res) =>
   res.sendFile("/usr/app/src/client/build/index.html")
 );
 
-http.createServer(app).listen(80);
+http.createServer(app).listen(3101);
