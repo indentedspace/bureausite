@@ -11,7 +11,8 @@
     "typescript": "^4.3.4"
   },
   "scripts": {
-    "build-server": "yarn tsc -b server",
+    "prepare-server": "cd ./server && yarn",
+    "build-server": "yarn prepare-server && yarn tsc -b server",
     "build-client": "cd ./client && yarn && yarn build",
     "build": "yarn && yarn build-server && yarn build-client",
     "start": "docker-compose build && docker-compose up",
